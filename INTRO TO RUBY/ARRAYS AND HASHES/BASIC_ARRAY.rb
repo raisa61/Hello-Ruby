@@ -102,5 +102,36 @@ print a
 puts " "
 puts " "
 
+#MAKING A STRING FROM ALL THE ARRAY ELEMENTS
+puts a.join #.join makes a string from all the elements without spaces between them, however you can modify how you join them
+puts a.join("-")
+#now you can put the entire string in an array
+b=a.join("-")
+puts b.split.class #the string becomes an array element
+#now you can modify how you want to split the items
+print b.split("-") #here, we get back the array again
+puts " "
+puts " "
 
+#HOW TO MAKE EVERY WORDS OF A STRING ARRAY ELEMENTS
+arr=%w(my name is Raisa and I love Ruby)
+print arr
+puts " "
+puts " "
 
+#ITERATORS
+arr.each do |val|
+  print val + " "
+end
+puts " "
+#or like this
+arr.each {|val| print val + " "}
+puts " "
+puts " "
+
+#HOW TO SELECT SPECIFIC VALUES FROM THE ARRAY BASED ON A CONDITION
+#we use select 
+z=(1..100).to_a.shuffle!
+p z
+puts " "
+print z.select{|val| val.odd?} #we print out only the odd numbers
